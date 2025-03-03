@@ -1,101 +1,137 @@
-GitHub, Git versiyon kontrol sistemini kullanarak projelerinizi yönetmenize ve işbirliği yapmanıza olanak tanır.
+Git ve GitHub ile Proje Yönetimi
+Git, projelerinizi takip etmek, versiyon kontrolü sağlamak ve işbirliği yapmak için kullanılan bir sistemdir. GitHub ise Git’in bulut tabanlı bir platformu olarak, projelerinizi barındırmanıza ve diğer geliştiricilerle işbirliği yapmanıza olanak tanır.
 
-Bazı Git Komutları ve İşlevleri
+Git Komutları ve İşlevleri
+git init
 
-   1.	git init
-•	İşlevi: Yeni bir Git deposu oluşturur.
-•	Kullanım Amacı: Mevcut bir dizini bir Git deposuna dönüştürmek için kullanılır. Bu komut, dizinde .git adlı gizli bir dizin oluşturur ve bu dizin, Git'in proje ile ilgili tüm bilgileri sakladığı yerdir.
-   git init
+İşlevi: Yeni bir Git deposu oluşturur.
+Açıklama: Mevcut dizini Git deposuna dönüştürmek için kullanılır. Bu komut ile .git adlı gizli bir dizin oluşturulur ve proje bilgileri burada saklanır.
+Kullanım:
+bash
+Kopyala
+git init
+git clone <repository_url>
 
-   2.	git clone
-•	İşlevi: Var olan bir uzak depoyu yerel makinenize kopyalar.
-•	Kullanım Amacı: Uzak bir depodaki tüm dosyaları ve commit geçmişini yerel makinenize indirmek için kullanılır. Bu, projeye katkıda bulunmak veya projeyi incelemek için gereklidir.
-   git clone <repository_url>
-   
-   3.	git status
-•	İşlevi: Çalışma dizinindeki değişikliklerin durumunu gösterir.
-•	Kullanım Amacı: Hangi dosyaların değiştirildiğini, hangilerinin sahneye eklendiğini ve hangilerinin commit edilmeye hazır olduğunu görmek için kullanılır.
-   git status
+İşlevi: Var olan bir uzak depoyu yerel makinenize kopyalar.
+Açıklama: Uzak bir depodaki tüm dosyaları ve commit geçmişini yerel bilgisayarınıza indirir.
+Kullanım:
+bash
+Kopyala
+git clone <repository_url>
+git status
 
-   4.	git add
-•	İşlevi: Değişiklikleri sahneye ekler.
-•	Kullanım Amacı: Belirli dosyaları veya tüm değişiklikleri bir sonraki commit için hazırlamak için kullanılır. Bu komut, değişikliklerin commit edilmeden önce gözden geçirilmesini sağlar.
-   git add <file_name>
-   git add .
+İşlevi: Çalışma dizinindeki değişikliklerin durumunu gösterir.
+Açıklama: Hangi dosyaların değiştirildiğini, sahneye eklendiğini veya commit edilmeye hazır olduğunu görmek için kullanılır.
+Kullanım:
+bash
+Kopyala
+git status
+git add <file_name>
 
+İşlevi: Değişiklikleri sahneye ekler.
+Açıklama: Belirli dosyaları veya tüm değişiklikleri bir sonraki commit için hazırlamak amacıyla kullanılır.
+Kullanım:
+bash
+Kopyala
+git add <file_name>
+git add .
+git commit -m "Commit mesajı"
 
-   5.	git commit
-•	İşlevi: Sahneye eklenen değişiklikleri kaydeder.
-•	Kullanım Amacı: Değişiklikleri yerel depoya kalıcı olarak eklemek ve bir commit mesajı ile birlikte saklamak için kullanılır. Bu, değişikliklerin kaydedilmesini ve geri alınabilir olmasını sağlar.
-   git commit -m "Commit mesajı"
+İşlevi: Sahneye eklenen değişiklikleri kaydeder.
+Açıklama: Değişiklikleri yerel depoya kalıcı olarak ekler ve bir commit mesajı ile saklar.
+Kullanım:
+bash
+Kopyala
+git commit -m "Commit mesajı"
+git push origin <branch_name>
 
+İşlevi: Yerel değişiklikleri uzak depoya gönderir.
+Açıklama: Yerel depodaki commit’leri uzak depoya aktarır, böylece projedeki diğer işbirlikçilerin değişiklikleri görmesini sağlar.
+Kullanım:
+bash
+Kopyala
+git push origin <branch_name>
+git pull origin <branch_name>
 
-   6.	git push
-•	İşlevi: Yerel değişiklikleri uzak depoya gönderir.
-•	Kullanım Amacı: Yerel depodaki commit'leri uzak depoya aktarmak için kullanılır. Bu, projedeki diğer işbirlikçilerin değişiklikleri görmesini ve kullanmasını sağlar.
-   git push origin <branch_name>
+İşlevi: Uzak depodaki değişiklikleri yerel depoya çeker ve birleştirir.
+Açıklama: Uzak depodaki en son değişiklikleri yerel depoya alır ve birleştirir.
+Kullanım:
+bash
+Kopyala
+git pull origin <branch_name>
+git branch
 
+İşlevi: Dalları listelemek, oluşturmak veya silmek için kullanılır.
+Açıklama: Mevcut dalları göstermek, yeni dallar oluşturmak veya var olan dalları silmek için kullanılır.
+Kullanım:
+bash
+Kopyala
+git branch
+git branch <new_branch_name>
+git branch -d <branch_name>
+git fetch origin
 
-   7.	git pull
-•	İşlevi: Uzak depodaki değişiklikleri yerel depoya çeker ve birleştirir.
-•	Kullanım Amacı: Uzak depodaki en son değişiklikleri yerel depoya almak ve bu değişiklikleri yerel çalışma dizini ile birleştirmek için kullanılır.
-   git pull origin <branch_name>
-
-   8.	git branch
-•	İşlevi: Dalları listelemek, oluşturmak veya silmek için kullanılır.
-•	Kullanım Amacı: Mevcut dalları göstermek, yeni dallar oluşturmak veya var olan dalları silmek için kullanılır. Dallar, projede paralel geliştirme yapılmasını sağlar.
-   git branch
-   git branch <new_branch_name>
-   git branch -d <branch_name>
-
-   9.	git fetch
-•	İşlevi: Uzak depodaki değişiklikleri yerel depoya indirir, ancak birleştirme yapmaz.
-•	Kullanım Amacı: Uzak depodaki en son değişiklikleri yerel depoya almak, ancak bu değişiklikleri hemen birleştirmemek için kullanılır.
-   git fetch origin
-
-  10.	git rebase
-•	İşlevi: Bir dalın tabanını başka bir dalın sonuna taşır.
-•	Kullanım Amacı: Daha temiz bir commit geçmişi oluşturmak için kullanılır. git merge yerine git rebase kullanarak, dalların birleşiminde daha düz bir tarihçe elde edebilirsiniz.
+İşlevi: Uzak depodaki değişiklikleri yerel depoya indirir.
+Açıklama: Uzak depodaki değişiklikleri yerel depoya indirir ancak birleştirme yapmaz.
+Kullanım:
+bash
+Kopyala
+git fetch origin
 git rebase <branch_name>
 
-GitHub'a resim eklemek için birkaç farklı yöntem kullanabilirsiniz. Bu yöntemler, resminizi bir GitHub deposuna yüklemek ve Markdown dosyalarında veya GitHub sayfalarında görüntülemek için kullanılabilir.
+İşlevi: Bir dalın tabanını başka bir dalın sonuna taşır.
+Açıklama: Daha temiz bir commit geçmişi oluşturur ve git merge yerine git rebase kullanarak, dalların birleşiminde daha düz bir tarihçe sağlar.
+Kullanım:
+bash
+Kopyala
+git rebase <branch_name>
+GitHub'a Resim Yükleme Yöntemleri
+GitHub'a resim yüklemek için üç farklı yöntem kullanılabilir. Her bir yöntemde, resminizi yükleyebilir ve Markdown dosyalarında veya GitHub sayfalarında gösterebilirsiniz.
 
 Yöntem 1: Resmi Depoya Yüklemek ve Markdown Dosyasında Kullanmak
-   1.	Resmi Depoya Yükleyin:
-   •	Resminizi yerel bilgisayarınızda uygun bir dizine yerleştirin.
-   •  Git komutları kullanarak resmi depoya ekleyin ve commit yapın.
-   git add <resim_dosya_yolu>
-   git commit -m "Resim eklendi"
-   git push origin <branch_name>
+Resmi Depoya Yüklemek:
 
-2.	Markdown Dosyasında Resmi Kullanmak:
-   • Resminizi Markdown dosyasında görüntülemek için aşağıdaki Markdown sözdizimini kullanın:
-   ![Resim Açıklaması](resim_dosya_yolu)
-  	Örneğin, images adlı bir klasörde example.png adlı bir resminiz varsa:
-  	![Örnek Resim](images/example.png)
+Resmi bilgisayarınıza uygun bir dizine kaydedin.
+Git komutları ile resmi depoya ekleyin ve commit yapın.
+bash
+Kopyala
+git add <resim_dosya_yolu>
+git commit -m "Resim eklendi"
+git push origin <branch_name>
+Markdown Dosyasında Resmi Kullanmak:
 
-Yöntem 2: GitHub Arayüzünü Kullanarak Resim Yüklemek
-  1.	GitHub Arayüzünü Kullanarak Resmi Yükleyin:
-  •	GitHub deposuna gidin ve Add file butonuna tıklayın, ardından Upload files seçeneğini seçin.
-  •	Yüklemek istediğiniz resmi seçin ve yükleyin.
-  •	Değişiklikleri commit edin.
+Resminizi Markdown dosyasında aşağıdaki şekilde görüntüleyebilirsiniz:
+markdown
+Kopyala
+![Resim Açıklaması](resim_dosya_yolu)
+Örnek:
+markdown
+Kopyala
+![Örnek Resim](images/example.png)
+Yöntem 2: GitHub Arayüzü ile Resim Yüklemek
+GitHub Arayüzü ile Resim Yüklemek:
 
- 2.   Markdown Dosyasında Resmi Kullanmak:
-  •   Eklediğiniz resmin URL'sini kopyalayın ve Markdown dosyanızda kullanın:
-      ![Resim Açıklaması](https://github.com/kullanici_adi/depo_adi/raw/branch_adi/resim_dosya_yolu)
-      ![Örnek Resim](https://github.com/kullanici_adi/depo_adi/raw/main/images/example.png)
+GitHub deposuna gidin ve Add file butonuna tıklayın.
+Upload files seçeneği ile yüklemek istediğiniz resmi seçin ve yükleyin.
+Değişiklikleri commit edin.
+Markdown Dosyasında Resmi Kullanmak:
 
+Eklediğiniz resmin URL'sini kopyalayın ve Markdown dosyanızda aşağıdaki gibi kullanın:
+markdown
+Kopyala
+![Resim Açıklaması](https://github.com/kullanici_adi/depo_adi/raw/main/images/example.png)
 Yöntem 3: GitHub Issues veya Pull Requests Kullanarak Resim Yüklemek
-  1.	GitHub Issues veya Pull Requests Kullanarak Resim Yükleyin:
-  •	GitHub'da bir Issue veya Pull Request açın.
-  •	Resmi sürükleyip bırakın veya Attach files by dragging & dropping alanına tıklayarak yükleyin.
-  •	Yüklenen resmin URL'sini kopyalayın.
-  2.	Markdown Dosyasında Resmi Kullanmak:
-  •	Kopyaladığınız URL'yi Markdown dosyanızda kullanın:
-      ![Resim Açıklaması](resim_URL)
-    	![Örnek Resim](https://user-images.githubusercontent.com/kullanici_adi/resim_id.png)
-![images](https://github.com/user-attachments/assets/7dda0b7c-ef35-4f1f-b04d-7709abdf4545)
+GitHub Issues veya Pull Requests Kullanarak Resim Yüklemek:
 
+Bir Issue veya Pull Request oluşturun.
+Resmi sürükleyip bırakın veya Attach files alanına tıklayarak yükleyin.
+Yüklenen resmin URL’sini kopyalayın.
+Markdown Dosyasında Resmi Kullanmak:
+
+Kopyaladığınız URL'yi aşağıdaki gibi kullanabilirsiniz:
+markdown
+Kopyala
+![Resim Açıklaması](https://user-images.githubusercontent.com/kullanici_adi/resim_id.png)
 
 
 
