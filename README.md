@@ -21,6 +21,7 @@ Kullanım:git status
 Açıklama: Dosyadaki değişiklikleri veya tüm değişiklikleri bir sonraki commit için hazırlamak amacıyla kullanılır.
 Kullanım:git add <file_name>    # Belirli dosya
          git add .              # Tüm dosyalar
+
 5. git commit -m "Commit mesajı"
 İşlevi: Değişiklikleri kaydeder.
 Açıklama: Yapılan değişiklikleri yerel depoya kalıcı olarak ekler ve bir commit mesajı ile saklar.
@@ -53,3 +54,37 @@ Kullanım:git merge <branch_name>
 Açıklama: Uzak depodaki son değişiklikleri yerel depoya alır, ancak hemen birleştirme işlemi yapmaz.
 Kullanım: git fetch origin
 
+GitHub’a resim yüklemek için birkaç farklı yöntem bulunmaktadır. Bu yöntemlerle resimlerinizi bir GitHub deposuna yükleyebilir ve Markdown dosyalarınızda veya README dosyanızda görüntüleyebilirsiniz.
+ Yöntem 1: GitHub Deposu Üzerinden Resim Yüklemek
+ 1.GitHub’a Gidin: GitHub'daki ilgili depoya gidin. Eğer depo yoksa, yeni bir depo oluşturabilirsiniz.
+ 2.Yeni Dosya Ekleyin:
+   Depo sayfasında "Add file" butonuna tıklayın ve ardından "Upload files" seçeneğini seçin.
+   Yüklemek istediğiniz resmi bilgisayarınızdan seçin ve yükleme işlemini başlatın.
+ 3.Commit Yapın:
+   Resim yüklendikten sonra, "Commit changes" butonuna tıklayın ve değişikliklerinizi commit edin.
+   Bu işlemi tamamladığınızda, resminiz GitHub depolarınızda yüklü olacaktır.
+ 4.Resmin URL’sini Alın:
+   Resminizi yükledikten sonra, depodaki ilgili dizine giderek resmin URL'sini alabilirsiniz. GitHub’daki resmin URL’si şu şekilde olacaktır:
+   https://github.com/kullanici_adi/depo_adi/raw/main/resim_dosya_yolu
+ 5.Markdown Dosyasında Resmi Kullanmak: Resminizi Markdown dosyanızda şu şekilde görüntüleyebilirsiniz:
+   ![Resim Açıklaması](https://github.com/kullanici_adi/depo_adi/raw/main/images/example.png)
+
+Yöntem 2: GitHub Issues veya Pull Request Kullanarak Resim Yüklemek
+ 2.1 GitHub, Issue ya da Pull Request içinde resim yüklemeyi de destekler. Bu yöntem, resimleri hızlıca yükleyip kullanmak için idealdir.
+ 2.2 Yeni Dosya Ekleyin:
+     Depo sayfasında "Add file" butonuna tıklayın ve ardından "Upload files" seçeneğini seçin.
+     Yüklemek istediğiniz resmi bilgisayarınızdan seçin ve yükleme işlemini başlatın.
+ 2.3 Resmin URL’sini Kopyalayın:
+     Yüklediğiniz resmin URL’si GitHub tarafından sağlanacaktır. URL şu formatta olacaktır:https://user-images.githubusercontent.com/kullanici_adi/resim_id.png
+ 2.4 Markdown Dosyasında Resmi Kullanmak: Kopyaladığınız URL’yi Markdown dosyanızda şu şekilde kullanabilirsiniz:![Resim Açıklaması](https://user-images.githubusercontent.com/kullanici_adi/resim_id.png)
+    
+Yöntem 3: GitHub Desktop veya Komut Satırını Kullanarak Resim Yüklemek
+ 3.1 Resmi Projeye Ekleyin:Bilgisayarınızda resmi uygun bir dizine yerleştirin (örneğin images/ dizini).
+ 3.2 Resmi GitHub’a Yükleyin: Git komut satırını açın ve aşağıdaki komutları kullanarak resmi depoya ekleyin:
+     git add images/example.png  # Resmi ekle
+     git commit -m "Resim eklendi"  # Commit yap
+     git push origin main  # Uzak depoya gönder
+ 3.3 Resmin URL’sini Alın:
+ GitHub’da resmi depoya yükledikten sonra, GitHub sayfasına giderek resmi sağ tıklayın ve "Copy image address" (Resim adresini kopyala) seçeneği ile URL'yi alabilirsiniz.
+ URL şu şekilde olacaktır:https://github.com/kullanici_adi/depo_adi/raw/main/images/example.png
+ 3.4 Markdown Dosyasında Resmi Kullanmak: Resminizi Markdown dosyanızda şu şekilde kullanabilirsiniz:![Resim Açıklaması](https://github.com/kullanici_adi/depo_adi/raw/main/images/example.png)
