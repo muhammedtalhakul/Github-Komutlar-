@@ -92,6 +92,6 @@ Yöntem 3: GitHub Issues veya Pull Requests Kullanarak Resim Yüklemek
   •	Yüklenen resmin URL'sini kopyalayın.
   2.	Markdown Dosyasında Resmi Kullanmak:
   •	Kopyaladığınız URL'yi Markdown dosyanızda kullanın:
-      ![Resim Açıklaması](resim_URL)
+     
     	![Örnek Resim](https://user-images.githubusercontent.com/kullanici_adi/resim_id.png)
-![images](https://github.com/user-attachments/assets/7dda0b7c-ef35-4f1f-b04d-7709abdf4545)
+
