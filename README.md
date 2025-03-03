@@ -85,4 +85,5 @@ Yöntem 3: GitHub Issues veya Pull Requests Kullanarak Resim Yüklemek
   •	Kopyaladığınız URL'yi Markdown dosyanızda kullanın:
      
     	
+![images](https://github.com/user-attachments/assets/7a61e774-daa7-4cde-8d9d-276c13f0a4ee)
 
